@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Customer Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+      <h1>Customer Management System</h1>
+      <hr>
+      <h2>Customer Details</h2>
+
+      <form action="#" th:action="@{/saveCustomer}" th:object="${customer}" method="POST">
+
+          <input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{street}" placeholder="Street" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{address}" placeholder="Address" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{city}" placeholder="City" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{state}" placeholder="State" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4">
+          <input type="text" th:field="*{phone}" placeholder="Phone" class="form-control mb-4 col-4">
+          <button type="submit" class="btn btn-info col-2">Submit</button>
+      </form>
+
+      <hr>
+      <a th:href="@{/}">Back to Customer List</a>
+  </div>
+</body>
+</html>
